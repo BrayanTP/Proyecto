@@ -9,7 +9,6 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <script src=""></script>
 
     <div class="form-horizontal">
         <h4>usuario</h4>
@@ -18,7 +17,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="nombre">Nombre: </label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese un nombre de usuario" } })
                 @Html.ValidationMessageFor(model => model.nombreUsuario, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -26,7 +25,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="correo">Correo: </label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control", @type = "email", @placeholder = "Ingrese su correo" } })
                 @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,7 +33,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="contraseña">Contraseña: </label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control", @type = "password" } })
+                @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control", @type = "password", @placeholder ="Ingrese una contraseña"} })
                 @Html.ValidationMessageFor(model => model.contraseña, "", new { @class = "text-danger" })
             </div>
         </div>

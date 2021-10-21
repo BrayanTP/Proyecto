@@ -481,7 +481,7 @@
           <End Role="tramite" Type="Self.tramite" Multiplicity="*" />
           <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="codigo_policiaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="codigo_policiaEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="articulo" EntityType="Self.articulo" />
           <EntitySet Name="libro" EntityType="Self.libro" />
           <EntitySet Name="noticia" EntityType="Self.noticia" />
@@ -528,7 +528,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="codigo_policiaModelStoreContainer" CdmEntityContainer="codigo_policiaEntities">
+        <EntityContainerMapping StorageEntityContainer="codigo_policiaModelStoreContainer" CdmEntityContainer="codigo_policiaEntities1">
           <EntitySetMapping Name="articulo">
             <EntityTypeMapping TypeName="codigo_policiaModel.articulo">
               <MappingFragment StoreEntitySet="articulo">

@@ -26,7 +26,6 @@ namespace Proyecto.Models
     
         public int idusuario { get; set; }
         [Required(ErrorMessage = "No puede ir vacio")]
-        [StringLength(30, ErrorMessage = "Excedio el limite de caracteres")]
         public string nombreUsuario { get; set; }
         [Required(ErrorMessage = "No puede ir vacio")]
         public string correo { get; set; }
