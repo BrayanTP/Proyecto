@@ -13,10 +13,10 @@ namespace Proyecto.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class codigo_policiaEntities1 : DbContext
+    public partial class codigo_policiaEntities : DbContext
     {
-        public codigo_policiaEntities1()
-            : base("name=codigo_policiaEntities1")
+        public codigo_policiaEntities()
+            : base("name=codigo_policiaEntities")
         {
         }
     
@@ -32,6 +32,11 @@ namespace Proyecto.Models
         public virtual DbSet<tipo_usuario> tipo_usuario { get; set; }
         public virtual DbSet<titulo> titulo { get; set; }
         public virtual DbSet<tramite> tramite { get; set; }
+        public virtual DbSet<tramite_requisito> tramite_requisito { get; set; }
         public virtual DbSet<usuario> usuario { get; set; }
+        public virtual DbSet<usuario_articulo> usuario_articulo { get; set; }
+        public virtual DbSet<usuario_noticia> usuario_noticia { get; set; }
+        public virtual DbSet<usuario_tipo_usuario> usuario_tipo_usuario { get; set; }
+        public virtual DbSet<usuario_tramite> usuario_tramite { get; set; }
     }
 }

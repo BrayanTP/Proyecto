@@ -17,7 +17,7 @@ namespace Proyecto.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public noticia()
         {
-            this.usuario = new HashSet<usuario>();
+            this.usuario_noticia = new HashSet<usuario_noticia>();
         }
     
         public int idnoticia { get; set; }
@@ -27,6 +27,6 @@ namespace Proyecto.Models
         public bool estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<usuario> usuario { get; set; }
+        public virtual ICollection<usuario_noticia> usuario_noticia { get; set; }
     }
 }

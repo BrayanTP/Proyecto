@@ -16,7 +16,7 @@ namespace Proyecto.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            using (var db = new codigo_policiaEntities1())
+            using (var db = new codigo_policiaEntities())
             {
                 return View(db.usuario.ToList());
 
@@ -39,7 +39,7 @@ namespace Proyecto.Controllers
 
             try
             {
-                using (var db = new codigo_policiaEntities1())
+                using (var db = new codigo_policiaEntities())
                 {
                     usuario.contraseña = UsuarioController.HashSHA1(usuario.contraseña);
                     db.usuario.Add(usuario);
@@ -82,7 +82,7 @@ namespace Proyecto.Controllers
         public ActionResult Login(string user, string password)
         {
             string passEncrip = UsuarioController.HashSHA1(password);
-            using (var db = new codigo_policiaEntities1())
+            using (var db = new codigo_policiaEntities())
             {
                 var userLogin = db.usuario.FirstOrDefault(e => e.correo == user && e.contraseña == passEncrip);
                 if (userLogin != null)

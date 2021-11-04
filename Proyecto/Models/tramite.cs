@@ -17,8 +17,8 @@ namespace Proyecto.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tramite()
         {
-            this.requisitos = new HashSet<requisitos>();
-            this.usuario = new HashSet<usuario>();
+            this.tramite_requisito = new HashSet<tramite_requisito>();
+            this.usuario_tramite = new HashSet<usuario_tramite>();
         }
     
         public int idtramite { get; set; }
@@ -28,8 +28,8 @@ namespace Proyecto.Models
     
         public virtual titulo titulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<requisitos> requisitos { get; set; }
+        public virtual ICollection<tramite_requisito> tramite_requisito { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<usuario> usuario { get; set; }
+        public virtual ICollection<usuario_tramite> usuario_tramite { get; set; }
     }
 }
